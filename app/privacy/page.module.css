@@ -1,0 +1,90 @@
+/* Privacy Policy — unique two-column reading layout (collapses to single column) */
+.layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.tocCol {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+}
+
+.tocInner {
+  padding: 1.15rem 0.9rem;
+}
+
+.tocTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 0.65rem;
+  padding-left: 0.85rem;
+}
+
+/* Neutralise the global .toc sticky so the whole column (title + nav) sticks together */
+.tocCol .tocNav {
+  position: static;
+  top: auto;
+}
+
+.intro {
+  padding: clamp(1.4rem, 2.4vw, 2rem);
+  margin-bottom: 2.5rem;
+}
+
+.introRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.75rem;
+  margin-top: 1.25rem;
+}
+
+.updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.updated svg {
+  width: 17px;
+  height: 17px;
+  color: var(--accent);
+}
+
+.contactCard {
+  margin-top: 1.75rem;
+  padding: clamp(1.3rem, 2.2vw, 1.8rem);
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.94rem;
+}
+
+.contactRow svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-ink);
+  flex: none;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .tocCol {
+    display: none;
+  }
+}

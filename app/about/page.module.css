@@ -1,0 +1,42 @@
+/* About route — page-unique layout only. Global classes handle everything else. */
+
+.story {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.storyMedia {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 5 / 6;
+  box-shadow: var(--shadow-lg);
+  background: var(--beige);
+}
+.storyMedia img { width: 100%; height: 100%; object-fit: cover; }
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.1rem;
+  background: var(--beige);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.rating {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(3.2rem, 7vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.rating :global(.suffix) { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .story { grid-template-columns: 1fr; }
+  .storyMedia { aspect-ratio: 16 / 11; }
+}

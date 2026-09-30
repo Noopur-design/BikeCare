@@ -1,0 +1,27 @@
+/* Pricing — compare plans responsive swap.
+   Desktop shows the scrollable comparison table; at ≤768px the table is
+   hidden and a stacked per-plan card block takes its place. */
+
+.compareDesktop {
+  display: block;
+}
+
+.compareCards {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .compareDesktop {
+    display: none;
+  }
+  .compareCards {
+    display: grid;
+    gap: 1.1rem;
+  }
+}
+
+.compareCard :global(.plan__features) {
+  margin: 0;
+  padding-top: 0;
+  border-top: none;
+}

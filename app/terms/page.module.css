@@ -1,0 +1,44 @@
+/* Terms & Conditions — two-column legal layout (toc + prose) */
+.layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.side {
+  position: sticky;
+  top: calc(var(--nav-h) + 20px);
+}
+
+/* Neutralise the global .toc sticky so the whole glass card sticks instead */
+.side :global(.toc) {
+  position: static;
+  top: auto;
+}
+
+.tocHead {
+  margin-bottom: 0.85rem;
+}
+
+.updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--r-pill);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.updated svg { width: 15px; height: 15px; }
+
+.contactBox {
+  margin-top: 3rem;
+}
+
+@media (max-width: 960px) {
+  .layout { grid-template-columns: 1fr; gap: 1.75rem; }
+  .side { position: static; }
+}
