@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5 { font-weight: 600; line-height: 1.08; letter-spacing: -0.02e
 .mega--left { left: 0; transform: none; }
 .mega__panel {
   display: grid; grid-template-columns: 1.05fr 1.4fr; gap: 0.5rem; width: min(680px, 86vw); padding: 0.6rem;
-  background: rgba(255,255,255,0.72); backdrop-filter: blur(30px) saturate(180%); -webkit-backdrop-filter: blur(30px) saturate(180%);
+  background: rgba(252,250,246,0.98); backdrop-filter: blur(30px) saturate(180%); -webkit-backdrop-filter: blur(30px) saturate(180%);
   border: 1px solid var(--border-2); border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.7);
 }
@@ -419,7 +419,9 @@ h1, h2, h3, h4, h5 { font-weight: 600; line-height: 1.08; letter-spacing: -0.02e
 .brand-tile small { display: block; font-family: var(--font-sans), sans-serif; font-weight: 600; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-top: 2px; }
 
 /* ---------- Pricing ---------- */
-.plan { display: flex; flex-direction: column; padding: clamp(1.5rem, 2.4vw, 2rem); position: relative; height: 100%; }
+.plan { display: flex; flex-direction: column; padding: clamp(1.5rem, 2.4vw, 2rem); position: relative; height: 100%; overflow: visible; }
+.plan::after { display: none; } /* drop the card sheen so the overflow-visible badge isn't masked */
+.plan.is-featured { padding-top: clamp(1.9rem, 2.6vw, 2.3rem); }
 .plan.is-featured { border-color: var(--accent); box-shadow: var(--shadow-md); background: var(--glass-strong); }
 .plan__badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); }
 .plan__name { font-size: 1.1rem; font-weight: 700; }
@@ -443,6 +445,7 @@ h1, h2, h3, h4, h5 { font-weight: 600; line-height: 1.08; letter-spacing: -0.02e
 .table thead th { font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); background: var(--beige-2); }
 .table tbody tr:last-child td { border-bottom: none; }
 .table td.center, .table th.center { text-align: center; }
+.table svg { width: 20px; height: 20px; vertical-align: middle; }
 .table .yes { color: var(--accent); } .table .no { color: var(--ink-2); opacity: 0.4; }
 .table__highlight { background: var(--accent-soft); }
 

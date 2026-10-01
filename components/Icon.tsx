@@ -53,6 +53,8 @@ export default function Icon({ name, className, filled }: { name: IconName; clas
   return (
     <svg
       className={className}
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill={filled ? 'currentColor' : 'none'}
       stroke={filled ? 'none' : 'currentColor'}
