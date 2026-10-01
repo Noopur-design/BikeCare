@@ -244,29 +244,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* MAP */}
+      {/* CLOSING CTA */}
       <section className="section section--tight">
         <div className="container container--wide">
-          <Reveal>
-            <div className="between" style={{ alignItems: 'flex-end', marginBottom: '1.75rem' }}>
-              <div className="section-head" style={{ marginBottom: 0 }}>
-                <span className="eyebrow">Find us</span>
-                <h2 className="h2">Our Indiranagar workshop.</h2>
-              </div>
-              <span className="cluster small muted" style={{ gap: '0.5rem' }}>
-                <Icon name="pin" />{CONTACT.address}
-              </span>
-            </div>
-          </Reveal>
-          <Reveal dir="scale">
-            <div className="map">
-              <iframe
-                title="BIKECARE workshop location in Indiranagar, Bengaluru"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=77.630%2C12.965%2C77.650%2C12.980&layer=mapnik&marker=12.9719%2C77.6412"
-                loading="lazy"
-              />
-            </div>
-          </Reveal>
           <Reveal>
             <div className="center mt-4">
               <p className="lead" style={{ marginBottom: '1.1rem' }}>Prefer to book straight away?</p>
